@@ -185,7 +185,8 @@ function Slide1() {
       style={{
         width: CANVAS_W,
         height: CANVAS_H,
-        background: `linear-gradient(175deg, ${T.bgAlt} 0%, ${T.bg} 50%, #0A0918 100%)`,
+         background:
+          "radial-gradient(ellipse at 50% 40%, #7C3AED 0%, #5B21B6 60%, #4C1D95 100%)",
         position: "relative",
         overflow: "hidden",
         display: "flex",
@@ -198,7 +199,7 @@ function Slide1() {
       <Glow x="60%" y="5%" size={500} color="rgba(167, 139, 250, 0.2)" />
 
       {/* App icon + name */}
-      <div
+      {/* <div
         style={{
           display: "flex",
           alignItems: "center",
@@ -221,7 +222,7 @@ function Slide1() {
         >
           Morso
         </span>
-      </div>
+      </div> */}
 
       {/* Headline */}
       <div
@@ -233,12 +234,12 @@ function Slide1() {
         }}
       >
         <Caption
-          label="AI-Powered Learning"
+          label="Create"
           headline={
             <>
-              LEARN
+              COURSES ON
               <br />
-              <span style={{ color: T.accentLight }}>ANYTHING</span>
+              <span >ANY TOPIC</span>
             </>
           }
         />
@@ -255,74 +256,18 @@ function Slide1() {
           zIndex: 2,
         }}
       >
-        <Phone src="/screenshots/home.png" alt="Home screen" />
+        <Phone src="/screenshots/create.png" alt="Home screen" />
       </div>
     </div>
   );
 }
-
 function Slide2() {
   return (
     <div
       style={{
         width: CANVAS_W,
         height: CANVAS_H,
-        background: `linear-gradient(170deg, #1A0F30 0%, ${T.bg} 100%)`,
-        position: "relative",
-        overflow: "hidden",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        fontFamily: "inherit",
-      }}
-    >
-      <Glow x="55%" y="-5%" size={500} />
-
-      {/* Headline — top center */}
-      <div
-        style={{
-          marginTop: CANVAS_H * 0.06,
-          paddingInline: CANVAS_W * 0.06,
-          zIndex: 2,
-          textAlign: "center",
-        }}
-      >
-        <Caption
-          label="Create"
-          headline={
-            <>
-              COURSE IN
-              <br />
-              <span style={{ color: T.amber }}>30 SECONDS</span>
-            </>
-          }
-        />
-      </div>
-
-      {/* Phone — bottom center */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: "50%",
-          transform: "translateX(-50%) translateY(14%)",
-          width: "70%",
-          zIndex: 2,
-        }}
-      >
-        <Phone src="/screenshots/create.png" alt="Create course" />
-      </div>
-    </div>
-  );
-}
-
-function Slide3() {
-  return (
-    <div
-      style={{
-        width: CANVAS_W,
-        height: CANVAS_H,
-        background: `linear-gradient(180deg, ${T.bg} 0%, #100D22 100%)`,
+        background: "linear-gradient(180deg, #6D28D9 0%, #4C1D95 100%)",
         position: "relative",
         overflow: "hidden",
         display: "flex",
@@ -344,10 +289,10 @@ function Slide3() {
         }}
       >
         <Caption
-          label="Lessons"
+          label="Learn"
           headline={
             <>
-              <span style={{ color: T.green }}>BITE-SIZED</span>
+              <span>BITE-SIZED</span>
               <br />
               LESSONS
             </>
@@ -372,13 +317,14 @@ function Slide3() {
   );
 }
 
-function Slide4() {
+
+function Slide3() {
   return (
     <div
       style={{
         width: CANVAS_W,
         height: CANVAS_H,
-        background: `linear-gradient(170deg, #0F1A12 0%, ${T.bg} 60%)`,
+        background: "linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%)",
         position: "relative",
         overflow: "hidden",
         display: "flex",
@@ -405,7 +351,7 @@ function Slide4() {
             <>
               TEST YOUR
               <br />
-              <span style={{ color: T.green }}>KNOWLEDGE</span>
+              <span>KNOWLEDGE</span>
             </>
           }
         />
@@ -428,13 +374,14 @@ function Slide4() {
   );
 }
 
-function Slide5() {
+function Slide4() {
   return (
     <div
       style={{
         width: CANVAS_W,
         height: CANVAS_H,
-        background: `linear-gradient(175deg, #1A1035 0%, ${T.bg} 100%)`,
+        background:
+          "linear-gradient(180deg, #0F0A2E 0%, #1A1040 50%, #0F0A2E 100%)",
         position: "relative",
         overflow: "hidden",
         display: "flex",
@@ -456,12 +403,12 @@ function Slide5() {
         }}
       >
         <Caption
-          label="Progress"
+          label="Compete"
           headline={
             <>
-              UNLOCK
+              ON THE
               <br />
-              <span style={{ color: T.amber }}>ACHIEVEMENTS</span>
+              <span style={{ color: T.amber }}>LEADERBOARD</span>
             </>
           }
         />
@@ -478,19 +425,20 @@ function Slide5() {
           zIndex: 2,
         }}
       >
-        <Phone src="/screenshots/achievements.png" alt="Achievements" />
+        <Phone src="/screenshots/leaderboard.png" alt="Achievements" />
       </div>
     </div>
   );
 }
 
-function Slide6() {
+function Slide5() {
   return (
     <div
       style={{
         width: CANVAS_W,
         height: CANVAS_H,
-        background: `linear-gradient(180deg, #130F2A 0%, ${T.bg} 100%)`,
+        background:
+          "linear-gradient(180deg, #0F0A2E 0%, #1A1040 50%, #0F0A2E 100%)",
         position: "relative",
         overflow: "hidden",
         display: "flex",
@@ -499,135 +447,41 @@ function Slide6() {
         fontFamily: "inherit",
       }}
     >
-      <Glow x="50%" y="20%" size={600} />
-      <Glow x="-15%" y="50%" size={400} color="rgba(167, 139, 250, 0.1)" />
+      <Glow x="55%" y="-5%" size={500} />
 
-      {/* App icon */}
-      <div style={{ marginTop: CANVAS_H * 0.08, zIndex: 2 }}>
-        <img
-          src="/app-icon.png"
-          alt="Morso"
-          style={{
-            width: 100,
-            height: 100,
-            borderRadius: 24,
-            boxShadow: `0 0 60px ${T.accentGlow}`,
-          }}
-        />
-      </div>
-
-      {/* Headline */}
+      {/* Headline — top center */}
       <div
         style={{
-          marginTop: CANVAS_H * 0.04,
-          paddingInline: CANVAS_W * 0.1,
+          marginTop: CANVAS_H * 0.06,
+          paddingInline: CANVAS_W * 0.06,
           zIndex: 2,
+          textAlign: "center",
         }}
       >
         <Caption
+          label="Track"
           headline={
             <>
-              And <span style={{ color: T.accentLight }}>so much</span>
+              YOUR
               <br />
-              more.
+              <span style={{ color: T.amber }}>PROGRESS</span>
             </>
           }
         />
       </div>
 
-      {/* Feature pills grid */}
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 14,
-          justifyContent: "center",
-          marginTop: CANVAS_H * 0.05,
-          paddingInline: CANVAS_W * 0.06,
-          zIndex: 2,
-        }}
-      >
-        <Pill icon="🎯" text="Interactive Quizzes" />
-        <Pill icon="⚡" text="XP & Streaks" />
-        <Pill icon="🏆" text="Achievements" />
-        <Pill icon="📊" text="Leaderboard" />
-        <Pill icon="📄" text="Upload PDFs" />
-        <Pill icon="🎥" text="YouTube to Course" />
-        <Pill icon="📱" text="Offline Ready" />
-        <Pill icon="🤖" text="AI-Powered" />
-      </div>
-
-      {/* Coming soon */}
-      <div
-        style={{
-          marginTop: CANVAS_H * 0.05,
-          zIndex: 2,
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            fontSize: CANVAS_W * 0.026,
-            fontWeight: 600,
-            color: T.fgMuted,
-            textTransform: "uppercase",
-            letterSpacing: "0.1em",
-            marginBottom: 16,
-          }}
-        >
-          Coming Soon
-        </div>
-        <div
-          style={{
-            display: "flex",
-            gap: 14,
-            justifyContent: "center",
-            flexWrap: "wrap",
-            paddingInline: CANVAS_W * 0.08,
-          }}
-        >
-          {["Social Features", "Spaced Repetition", "Study Groups"].map(
-            (f) => (
-              <div
-                key={f}
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  background: "rgba(255,255,255,0.04)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  borderRadius: 16,
-                  padding: "12px 20px",
-                  fontSize: CANVAS_W * 0.028,
-                  fontWeight: 500,
-                  color: T.fgMuted,
-                }}
-              >
-                {f}
-              </div>
-            )
-          )}
-        </div>
-      </div>
-
-      {/* Tagline */}
+      {/* Phone — bottom center */}
       <div
         style={{
           position: "absolute",
-          bottom: CANVAS_H * 0.06,
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%) translateY(14%)",
+          width: "70%",
           zIndex: 2,
-          textAlign: "center",
         }}
       >
-        <div
-          style={{
-            fontSize: CANVAS_W * 0.04,
-            fontWeight: 600,
-            color: T.accentLight,
-          }}
-        >
-          Learn anything, one bite at a time.
-        </div>
+        <Phone src="/screenshots/profile.png" alt="Create course" />
       </div>
     </div>
   );
@@ -638,12 +492,11 @@ function Slide6() {
 // ═══════════════════════════════════════════════════════════
 
 const SLIDES = [
-  { id: "hero", label: "Hero", Component: Slide1 },
-  { id: "create", label: "Create Course", Component: Slide2 },
-  { id: "lessons", label: "Lessons", Component: Slide3 },
-  { id: "quizzes", label: "Quizzes", Component: Slide4 },
+  { id: "create", label: "Create", Component: Slide1 },
+  { id: "lessons", label: "Lessons", Component: Slide2 },
+  { id: "quizzes", label: "Quizzes", Component: Slide3 },
+  { id: "leaderboard", label: "Leaderboard", Component: Slide4 },
   { id: "progress", label: "Progress", Component: Slide5 },
-  { id: "more", label: "More Features", Component: Slide6 },
 ];
 
 // ═══════════════════════════════════════════════════════════
@@ -846,7 +699,7 @@ export default function ScreenshotsPage() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {SLIDES.map((slide, i) => (
           <ScreenshotPreview
             key={slide.id}
