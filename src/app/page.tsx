@@ -51,7 +51,12 @@ function Phone({
   return (
     <div
       className={`relative ${className}`}
-      style={{ aspectRatio: `${MK_W}/${MK_H}`, ...style }}
+      style={{
+        aspectRatio: `${MK_W}/${MK_H}`,
+        filter:
+          "drop-shadow(0 40px 80px rgba(0,0,0,0.7)) drop-shadow(0 0 60px rgba(124,58,237,0.35))",
+        ...style,
+      }}
     >
       <img
         src="/mockup.png"
@@ -96,7 +101,7 @@ function Caption({
       {label && (
         <div
           style={{
-            fontSize: CANVAS_W * 0.038,
+            fontSize: CANVAS_W * 0.048,
             fontWeight: 700,
             color: T.accentLight,
             textTransform: "uppercase",
@@ -227,19 +232,19 @@ function Slide1() {
       {/* Headline */}
       <div
         style={{
-          marginTop: CANVAS_H * 0.025,
+          marginTop: CANVAS_H * 0.06,
           paddingInline: CANVAS_W * 0.06,
           zIndex: 2,
           textAlign: "center",
         }}
       >
         <Caption
-          label="Create"
+          label="AI-Powered"
           headline={
             <>
-              COURSES ON
+              LEARN
               <br />
-              <span >ANY TOPIC</span>
+              <span>ANYTHING</span>
             </>
           }
         />
@@ -406,9 +411,9 @@ function Slide4() {
           label="Compete"
           headline={
             <>
-              ON THE
+              RISE UP
               <br />
-              <span style={{ color: T.amber }}>LEADERBOARD</span>
+              <span style={{ color: T.amber }}>THE RANKS</span>
             </>
           }
         />
@@ -469,6 +474,7 @@ function Slide5() {
           }
         />
       </div>
+
 
       {/* Phone — bottom center */}
       <div
